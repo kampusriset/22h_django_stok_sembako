@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block body %}
+{% load static %}
+
+<h1 class="text-center my-5 text-primary"><b>Daftar Akun</b></h1>
+
+<div class="container">
+    <div class="alert alert-info">
+        <h4><b>Petunjuk Ubah Password</b></h4>
+            <li style="list-style: none;">
+                <p>Kata sandi Anda tidak boleh terlalu mirip dengan informasi pribadi Anda yang lain.</p>
+                <p>Kata sandi Anda harus terdiri dari setidaknya 8 karakter.</p>
+                <p>Kata sandi Anda tidak boleh berupa kata sandi yang umum digunakan.</p>
+                <p>Kata sandi Anda tidak boleh seluruhnya berupa angka.</p>
+            </li>
+        </ul>
+    </div>
+
+    <form method="POST" class="card col-8 shadow-lg p-4 rounded-lg mx-auto p-5">
+        {% csrf_token %}
+        
+        {% if error %}
+        <div class="messages">
+            <div class="alert alert-danger">
+                <p>{{ error }}</p>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Password -->
+        <div class="form-group mb-3">
+            <label for="old_password" class="form-label">Password Lama:</label>
+            <input type="password" name="old_password" class="form-control" placeholder="Masukkan password" required>
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="new1_password" class="form-label">Password Baru:</label>
+            <input type="password" name="new_password1" class="form-control" placeholder="Konfirmasi password" required>
+        </div>
+        <!-- Confirm Password -->
+        <div class="form-group mb-3">
+            <label for="new2_password" class="form-label">Konfirmasi Password:</label>
+            <input type="password" name="new_password2" class="form-control" placeholder="Konfirmasi password" required>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="d-grid" align="center">
+            <button type="submit" class="btn btn-primary btn-lg">Ubah Password Akun</button>
+        </div>
+    </form>
+</div>
+
+{% endblock body%}

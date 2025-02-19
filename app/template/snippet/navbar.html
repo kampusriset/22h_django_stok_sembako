@@ -1,0 +1,45 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light p-4">
+    <div class="container">
+        <a class="navbar-brand" href="/"><h3><b>SembakoHub</b></h2></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        {% if request.user.is_authenticated %}
+        <div class="collapse navbar-collapse" id="navbarNav"style="padding-left:31%;">
+        {% else %}
+        <div class="collapse navbar-collapse" id="navbarNav"style="padding-left:50%;">
+        {% endif %}    
+            <ul class="navbar-nav ms-auto" >
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#produk">Produk</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tentang">Tentang Kami</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#kontak">Kontak</a>
+                </li>
+                {% if request.user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="/tabel">Tabel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/tabel/ubah_pw"><b>Ubah Password</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/tabel/logout"><b>Logout</b></a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="/tabel/login"><b>Login</b></a>
+                </li>
+                {% endif %}
+
+            </ul>
+        </div>
+    </div>
+</nav>

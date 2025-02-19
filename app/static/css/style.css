@@ -1,0 +1,53 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+.navbar {
+    background-color: #4CAF50;
+}
+.navbar a {
+    color: white !important;
+}
+.hero-section {
+    background: url('../gambar/home.png') center/cover;
+    height: 400px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero-section h1 {
+    font-size: 3rem;
+}
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+.footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+.table-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.table th, .table td {
+    text-align: center;
+}
+.table th {
+    background-color: #4CAF50;
+    color: white;
+}
+.table-striped tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}

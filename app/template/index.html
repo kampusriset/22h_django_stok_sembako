@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block body %}
+{% load static %}
+
+<section class="hero-section">
+    <div style="color:white">
+        <h1>Selamat Datang di SembakoHub</h1>
+        <p>Temukan berbagai kebutuhan sembako di sini!</p>
+    </div>
+</section>
+
+<!-- Featured Products -->
+<section class="container my-5" id="produk">
+    <h2 class="text-center mb-4">Produk Terbaru</h2>
+    <div class="row">
+        <!-- Product 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{% static 'gambar/beras.jpg' %}" class="card-img-top" alt="Sembako">
+                <div class="card-body">
+                    <h5 class="card-title">Beras Premium</h5>
+                    <p class="card-text">Harga: Rp 50.000/kg</p>
+                    <a href="#kontak" class="btn btn-success">Beli Sekarang</a>
+                </div>
+            </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{% static 'gambar/gula.jpg' %}" class="card-img-top" alt="Sembako">
+                <div class="card-body">
+                    <h5 class="card-title">Gula Pasir</h5>
+                    <p class="card-text">Harga: Rp 12.000/kg</p>
+                    <a href="#kontak" class="btn btn-success">Beli Sekarang</a>
+                </div>
+            </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{% static 'gambar/minyak.jpg' %}" class="card-img-top" alt="Sembako">
+                <div class="card-body">
+                    <h5 class="card-title">Minyak Goreng</h5>
+                    <p class="card-text">Harga: Rp 20.000/liter</p>
+                    <a href="#kontak" class="btn btn-success">Beli Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tentang Kami Section -->
+<section class="container my-5" id="tentang">
+    <h2 class="text-center mb-4 ">Tentang Kami</h2>
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="card border-0 rounded-lg p-2">
+                <div class="card-body">
+                    <h5 class="card-title text-success">Kami adalah SembakoHub</h5>
+                    <p class="card-text">SembakoHub adalah platform e-commerce yang menyediakan berbagai produk sembako berkualitas dengan harga yang terjangkau. Kami ingin membantu masyarakat untuk mendapatkan kebutuhan sehari-hari dengan mudah dan cepat. Kami berkomitmen untuk menyediakan produk berkualitas dan layanan yang terbaik untuk Anda.</p>
+                    <p class="card-text">Visi kami adalah menjadi platform penyedia sembako terbesar yang memberikan kenyamanan belanja sembako secara online di Indonesia. Kami percaya bahwa dengan teknologi, kebutuhan pokok seperti sembako bisa lebih mudah diakses oleh masyarakat luas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Kontak Section -->
+<section class="container my-5" id="kontak">
+    <h2 class="text-center mb-4 ">Kontak Kami</h2>
+    <div class="row justify-content-center">
+        <div class="col-10">
+            <div class="card border-0 rounded-lg">
+                <div class="card-body">
+                    <h5 class="card-title text-success">Hubungi Kami</h5>
+                    <p class="card-text">Untuk informasi lebih lanjut, Anda dapat menghubungi kami melalui cara berikut:</p>
+
+                    <!-- Info Kontak -->
+                    <ul class="list-unstyled">
+                        <li>
+                            <i class="bi bi-envelope-fill text-success" style="font-size: 20px;"></i>
+                            <a href="mailto:support@sembakohub.com" class="text-decoration-none text-success">support@sembakohub.com</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-whatsapp text-success" style="font-size: 20px;"></i>
+                            <a href="https://wa.me/6287728551825" class="text-decoration-none text-success" target="_blank">+62 877-2855-1825</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-facebook text-success" style="font-size: 20px;"></i>
+                            <a href="https://facebook.com/sembakohub" class="text-decoration-none text-success" target="_blank">SembakoHub Facebook</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-instagram text-success" style="font-size: 20px;"></i>
+                            <a href="https://instagram.com/sembakohub" class="text-decoration-none text-success" target="_blank">@sembakohub</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock body %}

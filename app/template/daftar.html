@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block body %}
+{% load static %}
+
+<h1 class="text-center my-5 text-primary"><b>Daftar Akun</b></h1>
+
+<div class="container">
+    <div class="alert alert-info">
+        <h4><b>Petunjuk Pendaftaran</b></h4>
+        <p>Silakan ikuti petunjuk berikut untuk membuat akun:</p>
+        <ul>
+            <li><b>Username:</b> Wajib diisi. 150 karakter atau kurang. Hanya huruf, angka, dan @/./+/-/_ saja</li>
+            <li><b>Email:</b> Masukkan alamat email yang valid.</li>
+            <li><b>Password: </b>
+                <p>Kata sandi Anda tidak boleh terlalu mirip dengan informasi pribadi Anda yang lain.</p>
+                <p>Kata sandi Anda harus terdiri dari setidaknya 8 karakter.</p>
+                <p>Kata sandi Anda tidak boleh berupa kata sandi yang umum digunakan.</p>
+                <p>Kata sandi Anda tidak boleh seluruhnya berupa angka.</p>
+            </li>
+        </ul>
+    </div>
+
+    <form method="POST" class="card col-8 shadow-lg p-4 rounded-lg mx-auto p-5">
+        {% csrf_token %}
+        {% if error %}
+        <div class="messages">
+            <div class="alert alert-danger">
+                <p>{{ error }}</p>
+            </div>
+        </div>
+        {% endif %}
+        <!-- Username -->
+        <div class="form-group mb-3">
+            <label for="username" class="form-label">Username:</label>
+            <input type="text" name="username" class="form-control" placeholder="Masukkan username" required>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" name="email" class="form-control" placeholder="Masukkan email" required>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group mb-3">
+            <label for="password1" class="form-label">Password:</label>
+            <input type="password" name="password1" class="form-control" placeholder="Masukkan password" required>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="form-group mb-3">
+            <label for="password2" class="form-label">Konfirmasi Password:</label>
+            <input type="password" name="password2" class="form-control" placeholder="Konfirmasi password" required>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="d-grid" align="center">
+            <button type="submit" class="btn btn-primary btn-lg">Daftar Akun</button>
+        </div>
+
+        <div class="text-center mt-3">
+            <p>Sudah punya akun? <a href="/tabel/login">Login di sini</a></p>
+        </div>
+    </form>
+</div>
+
+
+{% endblock body%}

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block body %}
+{% load static %}
+
+<h1 class="text-center my-5"><b>Tambah Produk Sembako</b></h1>
+
+<div class="container">
+    <form method="POST" class="card col-8 shadow-lg p-4 rounded-lg mx-auto p-5">
+        {% csrf_token %}
+        
+        <!-- Nama Produk -->
+        <div class="form-group mb-3">
+            <label for="nama_produk" class="form-label">Nama Produk:</label>
+            <input type="text" name="nama_produk" class="form-control" placeholder="Masukkan nama produk" required>
+        </div>
+
+        <!-- Harga -->
+        <div class="form-group mb-3">
+            <label for="harga" class="form-label">Harga:</label>
+            <input type="number" name="harga" class="form-control" placeholder="Masukkan harga produk" required>
+        </div>
+
+        <!-- Stok -->
+        <div class="form-group mb-3">
+            <label for="stok" class="form-label">Stok:</label>
+            <input type="number" name="stok" class="form-control" placeholder="Masukkan stok produk" required>
+        </div>
+
+        <!-- Kategori -->
+        <div class="form-group mb-3">
+            <label for="kategori" class="form-label">Kategori:</label>
+            <select name="kategori" class="form-select" required>
+                <option value="Bahan Pokok">Bahan Pokok</option>
+                <option value="Bahan Non Pokok">Bahan Non Pokok</option>
+            </select>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="d-grid">
+            <button type="submit" class="btn btn-success btn-lg float-right">Tambah Produk</button>
+        </div>
+    </form>
+</div>
+
+{% endblock body %}
