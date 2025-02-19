@@ -7,7 +7,8 @@ Aplikasi ini berisi data stok penjualan toko sembako.didalam aplikasi ini beisa 
 ## Flowchart
 Berikut adalah flowchart yang menggambarkan alur kerja aplikasi:
 
-![Flowchart](kampusriset/22h_django_stok_sembako/screenshoots/crud/user_flowchart_final.jpg)
+![Flowchart](22h_django_stok_sembako/screenshoots/crud/user_flowchart_final.jpg)
+)
 
 ## Perkenalan Tim
 - **Khoirul** - [ crud/tabel ]
