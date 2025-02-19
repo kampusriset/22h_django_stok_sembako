@@ -7,4 +7,4 @@ if __name__ == "__main__":
     nama = "Khoirul Musthofa"
     nim = "2213010461"
     peran = "Mengerjakan CRUD/Tabel"
-    perkenalan(nama, nim, peran)
+    perkenalan(nama, nim, peran,saya)
